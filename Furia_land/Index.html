@@ -4,51 +4,71 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Furia Valorant</title>
-    <script src="Script.js"></script>
     <link rel="icon" href="Imagens/favicon-32x32.png">
     <link rel="stylesheet" href="Style.css">
 </head>
+
+
 <body>
+    <script src="Script.js"></script>
     <header>
         <img src="Imagens/Furia_Esports_logo.png" class="imagem-cabecalho ">
         <h1>FURIA VALORANT</h1>
     </header>
-      
-    <main>
 
-        <div id="popup" class="popup-overlay">
+    <div id="popup" class="popup-overlay">
             <div class="popup-content">
-                <h1>FURIA</h1>
-                <h2>Insira seus dados para receber todas as novidades, calendarios de campeonatos e transmissões dos seus streamers e players de Valorant favoritos!</h2>
-                <form id="popupForm">
-                    <label for="email">E-mail:</label>
-                    <input type="email" id="email" name="email" required>
-                    
-                    <label for="nome">Nome:</label>
-                    <input type="text" id="nome" name="nome" required>
-                    
-                    <label for="idade">Idade:</label>
-                    <input type="number" id="idade" name="idade" required>
-    
-                    <button type="submit">Enviar</button>
-                </form>
-            </div>
-        </div>
-
-
-
-
-        <div class="TextoLoja">
-            <h1>Clique no banner abiaxo e acesse a nossa loja</h1>
-        </div>
+                    <h1>FURIA</h1>
+                    <h2>Insira seus dados para receber todas as novidades, calendarios de campeonatos e transmissões dos seus streamers e players de Valorant favoritos!</h2>
+                    <form id="popupForm">
+                        <label for="email">E-mail:</label>
+                        <input type="email" id="email" name="email" required>
+                        
+                        <label for="nome">Nome:</label>
+                        <input type="text" id="nome" name="nome" required>
+                        
+                        <label for="idade">Idade:</label>
+                        <input type="number" id="idade" name="idade" required>
         
-        <aside class="Loja">
-            <a href="https://furia.gg/" target="_blank">
-                <img src="Imagens/Loja.png" alt="Loja da FURIA">
-            </a>
-        </aside>
-    </main> 
+                        <button onclick="Submeter()" id="Enviar" type="button">Enviar</button>
+                    </form>
+                    <h3>Clique fora deste quadro para fecha-lo</h3>
+                </div>
+        </div>
 
+    <div class="layout-container">  
+        <aside class="Loja">
+            <div class="TextoLoja">
+                <h1>Clique no banner abaixo e acesse a nossa loja</h1>
+            </div>
+                <a href="https://furia.gg/" target="_blank">
+                <img src="Imagens/Loja.png" alt="Loja da FURIA">
+                </a>
+        </aside>
+        
+            <div class="Furiosos">
+                    <div class="info-container" id="infoContainer">
+                        <div class="info-header" id="infoHeader">
+                            <h1>Bem-vindo à FURIA Valorant!</h1>
+                            <p>Escolha uma pessoa à direita para ver mais informações.</p>
+                        </div>
+                    <div class="person-info">
+                        <img id="person-image" src="Imagens/default-person.jpg">
+                        <div id="person-details">
+                            <h2 id="person-name">Nome da Pessoa</h2>
+                            <p id="person-bio">Clique em um quadrado para ver detalhes.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                
+            <nav class="people-list">
+                <div class="person-item" data-name="Pessoa 1" data-image="Imagens/person1.jpg" data-bio="Biografia da Pessoa 1">Pessoa 1</div>
+                <div class="person-item" data-name="Pessoa 2" data-image="Imagens/person2.jpg" data-bio="Biografia da Pessoa 2">Pessoa 2</div>
+                <div class="person-item" data-name="Pessoa 3" data-image="Imagens/person3.jpg" data-bio="Biografia da Pessoa 3">Pessoa 3</div>
+                <!-- Adicione mais pessoas conforme necessário -->
+            </nav>     
+    </div>       
     <footer>
         <img src="Imagens/Furia_Esports_logo.png" class="imagem-rodape"> 
         <h1>FURIA</h1>

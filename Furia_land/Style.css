@@ -10,13 +10,13 @@ html, body{
 }
 
 body {
+    
     display: flex;
     flex-direction: column;
-    font-family: Arial,f;
-    justify-content: space-between;
-    background-color: #111111;
-    min-height: 100vh;
-    
+    font-family: "FonteFuria";
+    justify-content: start;
+    background-color: #000000;
+    color: white;
 }
 
 header {
@@ -24,15 +24,15 @@ header {
     padding: 10px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: start;
     height: 50px;
+    box-sizing: border-box;
 }
 
 header .imagem-cabecalho {
     width: 50px;
     height: auto;
-    margin-right: 20px;
-    
+    position: fixed;
 }
 
 header h1 {
@@ -40,15 +40,15 @@ header h1 {
     font-size: 40px;
     flex-grow: 1;
     text-align: center;
-    color:  whitesmoke;
-    font-family: "FonteFuria";
+
 }
 
 main {
     display: flex;
     flex-direction: column;
     flex: 1;
-
+    margin: 0;
+    padding: 0;
 }
 
 .popup-overlay {
@@ -58,7 +58,7 @@ main {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, 0.5);
     z-index: 1000;  
 }
 
@@ -67,7 +67,7 @@ main {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.9);
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0px 0px 10px rgb(22, 15, 119);
@@ -75,21 +75,21 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-   
+    text-align: center;
 }
 
 .popup-content h1{
-    color: whitesmoke;
-    font-family: "FonteFuria";
-    text-align: center;
-    font-size: 50px;
+    font-size: 100px;
+    margin: 0;
 }
 
-.popup-content h2, .popup-content label {
-    color: whitesmoke;
-    font-family: "FonteFuria";
-    text-align: center;
+.popup-content h3{
+    font-size: 30px;
+    padding-top: 10px;
+    color: rgb(255, 215, 0);
+    
 }
+
 
 .popup-content form {
     display: flex;
@@ -112,7 +112,6 @@ main {
     padding: 10px;
     background-color: rgb(22, 15, 119);
     color: white;
-    font-family: "FonteFuria";
     border: none;
     border-radius: 4px;
     cursor: pointer;
@@ -123,20 +122,27 @@ main {
     background-color: #45a049;
 }
 
+.confirmation-message button {
+    padding: 10px;
+    background-color: rgb(22, 15, 119);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.confirmation-message button:hover {
+    background-color: #45a049;
+}
+
 
 .TextoLoja{
     background-color: #111111;
-    color: whitesmoke;
-    font-family: "FonteFuria";
     font-size: 10px;
-    padding: 10px;
     text-align: center; 
-    width: 170px;
+    width: 150px;
     height: 190px;
-    margin-bottom: 0px;  
-    border-left: 10px solid black;
-    border-right: 10px solid black;
-    box-sizing: border-box;
+    margin-bottom: 10px;  
     display: flex;
     align-items: center;
     justify-content: center;
@@ -146,12 +152,9 @@ aside.Loja{
     background-color: black;
     width: 150px;
     height: 100%;
-    padding: 10px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    color:  whitesmoke;
-    font-family: "FonteFuria";
+    justify-content: space-between; 
 }
 
 aside.Loja a{
@@ -164,8 +167,80 @@ aside.Loja img{
     height: auto;
     object-fit: cover;
     align-items: left;
-    justify-content: left;
-    
+    justify-content: left;  
+}
+
+.layout-container {
+    display: flex;
+    flex-direction: row;
+    gap: 10px; 
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.Furiosos {
+    display: flex;
+    flex-direction: column;
+    flex: 5;
+    background-color: #111111;
+    box-sizing: border-box;
+}
+
+.info-container {
+    transition: opacity 0.3s ease;
+    height: 100hv;
+    display: flex;                
+    align-items: center;          
+    justify-content: center;     
+    text-align: center;  
+    flex: 5;
+}
+
+.info-header {
+    flex: 2;
+    display: flex;  
+}
+
+.info-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.person-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#person-details p{
+    font-family: Arial;
+}
+
+.people-list {
+    flex: 1;
+    background-color: 111111;
+    padding: 10px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 300px;
+}
+
+.person-item {
+    background-color: 111111;
+    padding: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.person-item:hover {
+    background-color: #111111;
 }
 
 
@@ -174,31 +249,26 @@ footer{
     padding: 5px;
     display: flex;
     align-items: center;
-    justify-content: left;
     height: 50px;
-    flex-shrink: 0;
 }
 
 footer .imagem-rodape{
     width: 50px;
     height: auto;
-    margin-right: 30px;
+    margin-right: 10px;
+    
 }
 
 footer h1{
     margin: 0;
     font-size: 30px;
-    flex-grow: 1;
     text-align: left;
-    color:  whitesmoke;
-    font-family: "FonteFuria";
 }
 
 footer h2{
     margin: 0;
-    font-size: 10px;
     flex-grow: 1;
-    text-align: left center;
-    color:  whitesmoke;
-    font-family: "FonteFuria";
+    text-align: right;
+    font-size: 10px;
+    
 }
