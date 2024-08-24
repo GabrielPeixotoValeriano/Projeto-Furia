@@ -27,6 +27,7 @@ header {
     justify-content: start;
     height: 50px;
     box-sizing: border-box;
+    margin: 10px;
 }
 
 header .imagem-cabecalho {
@@ -135,26 +136,26 @@ main {
     background-color: #45a049;
 }
 
+aside.Loja{
+    background-color: black;
+    width: 160px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+}
 
 .TextoLoja{
     background-color: #111111;
     font-size: 10px;
     text-align: center; 
-    width: 150px;
+    width: auto;
     height: 190px;
     margin-bottom: 10px;  
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-aside.Loja{
-    background-color: black;
-    width: 150px;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; 
+    border-radius: 8px;
 }
 
 aside.Loja a{
@@ -168,6 +169,7 @@ aside.Loja img{
     object-fit: cover;
     align-items: left;
     justify-content: left;  
+    border-radius: 8px;
 }
 
 .layout-container {
@@ -186,6 +188,7 @@ aside.Loja img{
     flex: 5;
     background-color: #111111;
     box-sizing: border-box;
+    border-radius: 8px;
 }
 
 .info-container {
@@ -206,7 +209,6 @@ aside.Loja img{
 .info-container img {
     width: 100%;
     height: auto;
-    border-radius: 8px;
 }
 
 .person-info {
@@ -223,7 +225,6 @@ aside.Loja img{
     flex: 1;
     background-color: 111111;
     padding: 10px;
-    border-radius: 8px;
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -235,7 +236,6 @@ aside.Loja img{
     padding: 10px;
     margin-bottom: 10px;
     cursor: pointer;
-    border-radius: 8px;
     text-align: center;
 }
 
@@ -243,10 +243,14 @@ aside.Loja img{
     background-color: #111111;
 }
 
+nav{
+    background-color: #111111;
+    border-radius: 8px;
+}
 
 footer{
     background-color: black;
-    padding: 5px;
+    margin: 10px;
     display: flex;
     align-items: center;
     height: 50px;
