@@ -51,22 +51,33 @@ document.addEventListener('DOMContentLoaded', () => {
             const instagram = this.getAttribute('data-instagram'); // Novo
             const twitter = this.getAttribute('data-twitter'); // Novo
             const twitch = this.getAttribute('data-twitch'); // Novo
+            
+            console.log(typeof twitch);
 
             infoContainer.innerHTML = `
                 <div class="person-info">
-                    <img id="person-image" src="${image}" alt="Pessoa">
+                    <div class="imagem"> <img id="person-image" src="${image}" alt="Pessoa"></div>
                     <div id="person-details">
-                        <h2 id="person-name">${name}</h2>
-                         <h3 id="person-funcao">${funcao}</h3> <!-- Exibindo a função -->
+                        <div> 
+                            <h3 id="person-name">${name}</h3>
+                            <h3 id="person-funcao">${funcao}</h3> <!-- Exibindo a função -->
+                        </div>
                         <p id="person-bio">${bio}</p>
                         <div id="person-links">
-                            <a href="${instagram}" target="_blank"><i class="fab fa-instagram"></i> Instagram</a> <!-- Novo -->
-                            <a href="${twitter}" target="_blank"><i class="fab fa-twitter"></i> Twitter</a> <!-- Novo -->
-                            <a href="${twitch}" target="_blank"><i class="fab fa-twitch"></i> Twitch</a> <!-- Novo -->
                         </div>
                     </div>
                 </div>
             `;
+            let links = document.getElementById("person-links");
+            if(instagram != null){
+                links.innerHTML += `<a href="${instagram}" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>`; 
+            }
+            if(twitter != null){
+                links.innerHTML +=`<a href="${twitter}" target="_blank"><i class="fab fa-twitter"></i> Twitter</a> `
+            }
+            if(twitch != null){
+                links.innerHTML +=`<a href="${twitch}" target="_blank"><i class="fab fa-twitch"></i> Twitch</a>`
+            }
 
             infoContainer.style.display = 'flex'; // Exibe a info-container
         });

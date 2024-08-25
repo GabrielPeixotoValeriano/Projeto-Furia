@@ -33,7 +33,6 @@ header {
 header .imagem-cabecalho {
     width: 50px;
     height: auto;
-    position: fixed;
 }
 
 header h1 {
@@ -143,6 +142,7 @@ aside.Loja{
     display: flex;
     flex-direction: column;
     justify-content: space-between; 
+    margin-left: 10px;
 }
 
 .TextoLoja{
@@ -185,10 +185,31 @@ aside.Loja img{
 .Furiosos {
     display: flex;
     flex-direction: column;
-    flex: 5;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
     background-color: #111111;
     box-sizing: border-box;
     border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    width: max-content;
+    flex-grow: 2;
+}
+
+.Furiosos h1, .Furiosos h2 {
+    margin: 10px;
+}
+
+.Furiosos h1 {
+    font-size: 60px;
+    margin-bottom: 10px; /* Mantém o espaço entre h1 e h2 */
+    width: 100%;
+}
+
+.Furiosos h2 {
+    font-size: 18px;
+    margin-top: 0; /* Garante que não haja margem superior no h2 */
 }
 
 .info-container {
@@ -203,7 +224,8 @@ aside.Loja img{
 
 .info-header {
     flex: 2;
-    display: flex;  
+    display: flex;
+    flex-direction: column;  
 }
 
 .info-container img {
@@ -213,30 +235,88 @@ aside.Loja img{
 
 .people-list {
     flex: 1;
-    background-color: 111111;
     padding: 10px;
     display: flex;
+    min-width: 300px;
+    max-width: 300px;
+    background-color: #111111;
+    border-radius: 8px;
+    width: auto;
     flex-direction: column;
     gap: 10px;
-    max-width: 300px;
+    margin-right: 10px; 
+    overflow: scroll;
 }
 
-.person-item {
-    background-color: 111111;
+#person-details{
+    width: calc(100% - 400px);
+    padding: 15px;
+    height: 370px;
+    display: grid;
+    grid-template-rows: 30px auto 30px;
+}
+#person-bio{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#person-details div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 20px;
+}
+
+.person-info .imagem{
+    height: 400px;
+    width: 400px;
+}
+
+.person-info{
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+}
+.person-info h2, .person-info h3, .person-info p{
+    width: fit-content;
+    margin: 0;
+}
+
+.imagem img{
+    height: 100%;
+    width: 100%;
+    flex-shrink: 0;
+    -webkit-flex-shrink: 0;
+}
+
+.person-item.man{
+    background-color: black;
     padding: 10px;
     margin-bottom: 10px;
     cursor: pointer;
     text-align: center;
+    border-radius: 8px;
+}
+
+.person-item.woman{
+    background-color: pink;
+    padding: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 8px;
 }
 
 .person-item:hover {
-    background-color: #111111;
+    opacity: 50%;
 }
 
 #person-links {
     display: flex;
     justify-content: space-around;
     margin-top: 10px;
+    bottom: 0;
 }
 
 #person-links a {
@@ -249,11 +329,6 @@ aside.Loja img{
 
 #person-links i {
     margin-right: 5px;
-}
-
-nav{
-    background-color: #111111;
-    border-radius: 8px;
 }
 
 footer{
@@ -281,6 +356,30 @@ footer h2{
     margin: 0;
     flex-grow: 1;
     text-align: right;
-    font-size: 10px;
+    font-size: 20px;
     
 }
+/* Estilo da barra de rolagem */
+::-webkit-scrollbar {
+    width: 12px; /* Largura da barra de rolagem */
+  }
+  
+  /* Estilo da parte da barra de rolagem que desliza */
+  ::-webkit-scrollbar-thumb {
+    background-color: #333; /* Cor do "thumb" (parte que desliza) */
+    border-radius: 6px; /* Bordas arredondadas do "thumb" */
+    border: 3px solid #000; /* Borda ao redor do "thumb" */
+  }
+  
+  /* Estilo da parte da barra de rolagem que não desliza (trilha) */
+  ::-webkit-scrollbar-track {
+    background-color: #222; /* Cor da trilha da barra de rolagem */
+    border-radius: 6px; /* Bordas arredondadas da trilha */
+  }
+  
+  /* Estilo das setas da barra de rolagem (se usadas) */
+  ::-webkit-scrollbar-button {
+    background-color: #333; /* Cor dos botões de rolagem */
+    border-radius: 6px; /* Bordas arredondadas dos botões */
+  }
+  
