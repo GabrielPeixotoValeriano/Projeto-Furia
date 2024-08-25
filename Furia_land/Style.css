@@ -211,16 +211,6 @@ aside.Loja img{
     height: auto;
 }
 
-.person-info {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-#person-details p{
-    font-family: Arial;
-}
-
 .people-list {
     flex: 1;
     background-color: 111111;
@@ -241,6 +231,24 @@ aside.Loja img{
 
 .person-item:hover {
     background-color: #111111;
+}
+
+#person-links {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+
+#person-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+}
+
+#person-links i {
+    margin-right: 5px;
 }
 
 nav{

@@ -46,17 +46,29 @@ document.addEventListener('DOMContentLoaded', () => {
         item.addEventListener('click', function() {
             const name = this.getAttribute('data-name');
             const image = this.getAttribute('data-image');
+            const funcao = this.getAttribute('data-funcao');
             const bio = this.getAttribute('data-bio');
+            const instagram = this.getAttribute('data-instagram'); // Novo
+            const twitter = this.getAttribute('data-twitter'); // Novo
+            const twitch = this.getAttribute('data-twitch'); // Novo
 
             infoContainer.innerHTML = `
                 <div class="person-info">
                     <img id="person-image" src="${image}" alt="Pessoa">
                     <div id="person-details">
                         <h2 id="person-name">${name}</h2>
+                         <h3 id="person-funcao">${funcao}</h3> <!-- Exibindo a função -->
                         <p id="person-bio">${bio}</p>
+                        <div id="person-links">
+                            <a href="${instagram}" target="_blank"><i class="fab fa-instagram"></i> Instagram</a> <!-- Novo -->
+                            <a href="${twitter}" target="_blank"><i class="fab fa-twitter"></i> Twitter</a> <!-- Novo -->
+                            <a href="${twitch}" target="_blank"><i class="fab fa-twitch"></i> Twitch</a> <!-- Novo -->
+                        </div>
                     </div>
                 </div>
             `;
+
+            infoContainer.style.display = 'flex'; // Exibe a info-container
         });
     });
 });
