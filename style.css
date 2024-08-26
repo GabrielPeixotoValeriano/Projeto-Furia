@@ -4,11 +4,6 @@
 }
 
 @font-face {
-    font-family: "Calibri";
-    src: url("Fontes/calibri-regular.ttf") format(opentype); 
-}
-
-@font-face {
     font-family: "Monument";
     src: url("Fontes/MonumentExtended-Regular.otf") format(opentype);
 
@@ -26,7 +21,7 @@ body {
     flex-direction: column;
     font-family: "Monument";
     justify-content: start;
-    background-color: #000000;
+    background-color: #555555;
     color: white;
 }
 
@@ -36,11 +31,10 @@ header {
     display: flex;
     align-items: center;
     justify-content: start;
-    height: 50px;
+    height: 100px;
     box-sizing: border-box;
-    margin: 10px;
-    font-family: "FonteFuria";
-    
+    margin-bottom: 10px;
+    font-family: "FonteFuria"; 
 }
 
 header .imagem-cabecalho {
@@ -148,7 +142,7 @@ main {
 }
 
 aside.Loja{
-    background-color: rgb(0, 0, 0);
+    background-color: #555555;
     min-width: 200px;
     max-width: 200px;
     height: 100%;
@@ -159,37 +153,19 @@ aside.Loja{
     margin-right: 10px;
 }
 
-.TextoLoja{
-    background-color: #000000;
-    font-size: 10px;
-    text-align: center; 
-    width: auto;
-    height: 190px;
-    margin-bottom: 10px;  
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 8px;
-    border: 2px solid transparent;
-    box-shadow: 0 0 10px 2px  #848081;
-    transition: box-shadow 0.3s ease, border-color 0.3s ease;
-}
-
 aside.Loja a{
     display: flex;
     flex: 1;
 }
 
 aside.Loja img{
-    width: 100%;
+    width: 196px;
     height: auto;
     object-fit: cover;
     align-items: left;
     justify-content: left;  
     border-radius: 8px;
-    border: 2px solid transparent;
-    box-shadow: 0 0 10px 2px #848081;
-    transition: box-shadow 0.3s ease, border-color 0.3s ease;
+    border: 2px solid  black;
 }
 
 .layout-container {
@@ -208,16 +184,17 @@ aside.Loja img{
     justify-content: center;
     align-items: center;
     height: 100%;
-    background-color: #000000;
+    background-image: url("Imagens/Logo.png");
+    background-position: center; 
+    background-size: cover; /* Ajusta a imagem para caber dentro do elemento */
+    background-repeat: no-repeat; /* Garante que a imagem não se repita */
     box-sizing: border-box;
     border-radius: 8px;
     padding: 20px;
     text-align: center;
     width: max-content;
     flex-grow: 2;
-    border: 2px solid transparent;
-    box-shadow: 0 0 10px 2px #848081;
-    transition: box-shadow 0.3s ease, border-color 0.3s ease;
+    border: 2px solid  black;
 }
 
 .Furiosos h1, .Furiosos h2 {
@@ -248,7 +225,8 @@ aside.Loja img{
 .info-header {
     flex: 2;
     display: flex;
-    flex-direction: column;  
+    flex-direction: column; 
+    margin-top: 35%;
 }
 
 .info-header h1{
@@ -277,6 +255,10 @@ aside.Loja img{
 
 #person-details{
     width: calc(100% - 400px);
+    background-image: url("Imagens/Carbono.jpg"); /* Adiciona a imagem de fundo */
+    background-repeat: repeat; /* Faz com que a imagem se repita */
+    background-size: cover; /* Ajusta o tamanho da imagem */
+    background-position: center; /* Centraliza a imagem */
     padding: 15px;
     height: 370px;
     display: grid;
@@ -330,7 +312,10 @@ aside.Loja img{
 }
 
 .person-item{
-    background-color: black;
+    background-image: url("Imagens/Carbono.jpg"); /* Adiciona a imagem de fundo */
+    background-repeat: repeat; /* Faz com que a imagem se repita */
+    background-size: cover; /* Ajusta o tamanho da imagem */
+    background-position: center; /* Centraliza a imagem */
     padding: 10px;
     margin-bottom: 10px;
     cursor: pointer;
@@ -371,11 +356,12 @@ aside.Loja img{
 
 footer{
     background-color: black;
-    margin: 10px;
+    margin-top: 10px;
     display: flex;
     align-items: center;
     height: 50px;
-    font-family: "FonteFuria";
+    font-family: "Monument";
+    padding: 10px;
 }
 
 footer .imagem-rodape{
@@ -389,13 +375,14 @@ footer h1{
     margin: 0;
     font-size: 30px;
     text-align: left;
+    font-family: "FonteFuria";
 }
 
 footer h2{
     margin: 0;
     flex-grow: 1;
     text-align: right;
-    font-size: 20px;
+    font-size: 15px;
     
 }
 
