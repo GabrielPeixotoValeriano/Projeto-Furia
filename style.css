@@ -3,6 +3,17 @@
     src: url("Fontes/Road_Rage.otf") format(opentype);
 }
 
+@font-face {
+    font-family: "Calibri";
+    src: url("Fontes/calibri-regular.ttf") format(opentype); 
+}
+
+@font-face {
+    font-family: "Monument";
+    src: url("Fontes/MonumentExtended-Regular.otf") format(opentype);
+
+}
+
 html, body{
     height: 100%;
     margin: 0;
@@ -13,7 +24,7 @@ body {
     
     display: flex;
     flex-direction: column;
-    font-family: "FonteFuria";
+    font-family: "Monument";
     justify-content: start;
     background-color: #000000;
     color: white;
@@ -28,6 +39,8 @@ header {
     height: 50px;
     box-sizing: border-box;
     margin: 10px;
+    font-family: "FonteFuria";
+    
 }
 
 header .imagem-cabecalho {
@@ -237,6 +250,10 @@ aside.Loja img{
     flex-direction: column;  
 }
 
+.info-header h1{
+    font-family: "Calibri";
+}
+
 .info-container img {
     width: 100%;
     height: auto;
@@ -263,11 +280,16 @@ aside.Loja img{
     height: 370px;
     display: grid;
     grid-template-rows: 30px auto 30px;
+    border: 2px solid transparent;
+    box-shadow: 0 0 10px 2px gold;
+    transition: box-shadow 0.3s ease, border-color 0.3s ease;
+    margin-left: 30px;
 }
 #person-bio{
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: "Calibri";
 }
 
 #person-details div{
@@ -297,6 +319,9 @@ aside.Loja img{
     width: 100%;
     flex-shrink: 0;
     -webkit-flex-shrink: 0;
+    border: 2px solid transparent;
+    box-shadow: 0 0 10px 2px gold;
+    transition: box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
 .person-item.man{
@@ -357,6 +382,7 @@ footer{
     display: flex;
     align-items: center;
     height: 50px;
+    font-family: "FonteFuria";
 }
 
 footer .imagem-rodape{
