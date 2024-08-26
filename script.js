@@ -82,4 +82,5 @@
                 infoContainer.style.display = 'flex';
             });
         });
+        
     });
